@@ -1,4 +1,7 @@
 {
+  "compilerOptions": {
+    "tabWidth": 2
+  },
   "files": [],
   "references": [
     { "path": "./tsconfig.app.json" },
