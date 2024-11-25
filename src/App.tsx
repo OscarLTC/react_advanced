@@ -1,26 +1,16 @@
 import "./App.css"
-import { useFetch } from "./hooks"
-
-const url = 'https://api.example.com/data'
-
-interface Data {
-  name: string
-  lastName: string
-  age: number
-}
+import { Button } from "./components"
 
 function App() {
 
-  const { data, error, loading } = useFetch<Data>(url)
 
-  if (loading) {
-    return <div>Cargando...</div>
+  const handleClick = () => {
+    console.log("click");
   }
 
-  if (error) {
-    return <div>UPS! Hay un error: {error.message}</div>
-  }
 
-  return <div>{JSON.stringify(data)}</div>
+  return <Button parentMethod={handleClick}>
+    <div>CTMR</div>
+  </Button>
 }
 export default App

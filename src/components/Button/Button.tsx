@@ -1,14 +1,10 @@
-import { useEffect } from "react";
+import { ReactNode } from "react";
 
 interface Props {
-  label: string;
+  children: ReactNode;
   parentMethod: () => void;
 }
 
-export const Button = ({ label, parentMethod }: Props) => {
-  useEffect(() => {
-    console.log("label cambio");
-  }, [label]);
-
-  return <button onClick={parentMethod}>{label}</button>;
+export const Button = ({ children, parentMethod }: Props) => {
+  return <button onClick={parentMethod}>{children}</button>;
 };
